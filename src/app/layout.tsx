@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { larken } from '@/fonts/larken'
+import { Navbar } from './components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Roasted Coffee House',
@@ -40,6 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Navbar />
       <body className={`scroll-smooth ${larken.variable} antialiased`}>{children}</body>
     </html>
   )
