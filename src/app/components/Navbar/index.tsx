@@ -17,7 +17,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div>
+    <div className="fixed w-full top-0 z-50 shadow-2xl shadow-black/50">
       <div className="bg-[#5B1312] tracking-[10px] py-3.5 text-center text-sm text-white">
         FREE SHIPPING ALL OVER INDONESIA
       </div>
