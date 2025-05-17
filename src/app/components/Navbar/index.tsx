@@ -1,5 +1,4 @@
 'use client'
-
 import Image from 'next/image'
 import { useState } from 'react'
 import { X, Menu } from 'lucide-react' // Gunakan ikon dari lucide-react (instalasi: npm i lucide-react)
@@ -18,14 +17,14 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 z-50 shadow-2xl shadow-black/50">
-      <div className="bg-[#5B1312] tracking-[10px] py-3.5 text-center text-sm text-white">
+      <div className="bg-[#5B1312] tracking-[10px] pty-2 px-2 lg:py-3.5 text-center text-xs lg:text-sm text-white">
         FREE SHIPPING ALL OVER INDONESIA
       </div>
-      <nav className="px-5 py-3 bg-[#F5F1E8] relative">
+      <nav className="px-3 lg:px-5 py-1 lg:py-3 bg-[#F5F1E8] relative">
         <div className="flex items-center justify-between px-4 py-2">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-10">
             <Image
-              src="/images/roasted-coffee-transparent-fit.png"
+              src="/logo/roasted-coffee-transparent-fit.png"
               alt="Logo Roasted Coffee House"
               width={48}
               height={48}
