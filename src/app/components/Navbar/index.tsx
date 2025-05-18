@@ -4,16 +4,23 @@ import { useState } from 'react'
 import { X, Menu } from 'lucide-react' // Gunakan ikon dari lucide-react (instalasi: npm i lucide-react)
 
 const menuNav = [
-  { name: 'Equipments', href: '#equipments' },
-  { name: 'Brew Guide', href: '#brew-guide' },
-  { name: 'Locations', href: '#locations' },
+  { name: 'Partner', href: '#partner' },
+  { name: 'Product', href: '#product' },
   { name: 'About', href: '#about' },
-  { name: 'Journal', href: '#journal' },
-  { name: 'Menu', href: '#menu' }
+  { name: 'Journal', href: '#journal' }
 ]
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      const yOffset = -180 // contoh offset 80px untuk navbar fixed
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
 
   return (
     <div className="fixed w-full top-0 z-50 shadow-2xl shadow-black/50">
@@ -30,13 +37,23 @@ export const Navbar = () => {
               height={48}
             />
             <ul className="hidden lg:flex space-x-9">
-              {menuNav.map((e, i) => (
-                <li key={i}>
-                  <a href={e.href} className="text-[#5B1312] hover:text-gray-300">
-                    {e.name}
+              {menuNav.map(({ name, href }, i) => {
+                const id = href.replace('#', '')
+                return (
+                  <a
+                    key={i}
+                    href={href}
+                    onClick={e => {
+                      e.preventDefault()
+                      setIsOpen(false)
+                      scrollToSection(id)
+                    }}
+                    className="text-[#5B1312] hover:text-gray-300"
+                  >
+                    {name}
                   </a>
-                </li>
-              ))}
+                )
+              })}
             </ul>
           </div>
 

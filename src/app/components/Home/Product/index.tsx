@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import { ProductCard } from '../../ProductCard'
 import { CoffeeBorder } from '../../CoffeeBorder'
 
@@ -57,7 +56,7 @@ const product = [
 
 export const Product = () => {
   return (
-    <section className="bg-[#F5F1E8] py-15 lg:py-44 lg:px-40">
+    <section className="bg-[#F5F1E8] py-15 lg:py-44 lg:px-40" id="partner">
       <div className="flex gap-12 lg:gap-20 items-center lg:mb-44 justify-center">
         <Image
           src="/logo/bankdki-logo.svg"
@@ -81,10 +80,16 @@ export const Product = () => {
           className="opacity-50 lg:w-[77px] lg:h-[77px] w-[40px] h-[40px]"
         />
       </div>
-      <div className="text-[#5B1312] flex-col mt-18 lg:text-[40px] leading-3.5 flex items-center justify-center gap-5">
+      <div
+        className="text-[#5B1312] flex-col mt-18 lg:text-[40px] leading-3.5 flex items-center justify-center gap-5"
+        id="product"
+      >
         <p className="text-center">OUR BEST SELLERS</p>
         <CoffeeBorder />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-8 xl:grid-cols-4 gap-13">
+        <div
+          id="product"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-8 xl:grid-cols-4 gap-13"
+        >
           {product.map((e, i) => {
             return (
               <ProductCard

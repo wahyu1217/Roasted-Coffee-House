@@ -1,4 +1,3 @@
-import React from 'react'
 import { CoffeeBorder } from '../../CoffeeBorder'
 
 type Offering = {
@@ -23,7 +22,7 @@ const offerings: Offering[] = [
 
 export const KeyOffering: React.FC = () => {
   return (
-    <section className="bg-[#5B1312] py-15 max-lg:px-8 px-2 text-center space-y-3">
+    <section className="bg-[#5B1312] py-15 max-lg:px-8 px-2 text-center space-y-3" id="journal">
       <p className="text-center text-4xl text-[#f8f3ed]">Key Offering</p>
       <CoffeeBorder />
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto mt-8">
