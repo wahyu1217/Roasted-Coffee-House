@@ -38,7 +38,7 @@ export const About = () => {
                 className="w-16 h-16 mb-4"
               />
               <h3 className="text-lg font-bold">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
+              <p>{item.desc}</p>
             </div>
           )
         })}
