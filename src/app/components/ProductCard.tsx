@@ -8,10 +8,10 @@ type ProductCardProps = {
 
 export const ProductCard = ({
   isNew = false,
-  imgSrc = '',
-  title = '',
-  price = '$ 4.24',
-  count = '250 gms'
+  imgSrc = '-',
+  title = '-',
+  price = '-',
+  count = '-'
 }: ProductCardProps) => {
   return (
     <div className="h-[350px] w-[195px] lg:w-[226px] lg:h-[360px] border border-purple-200 rounded-md overflow-hidden shadow-md flex flex-col">

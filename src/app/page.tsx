@@ -1,4 +1,7 @@
+import { Footer } from './components/Footer'
+import { About } from './components/Home/About'
 import { Hero } from './components/Home/Hero'
+import { OurCafe } from './components/Home/OurCafe'
 import { Product } from './components/Home/Product'
 
 export default function Home() {
@@ -6,9 +9,9 @@ export default function Home() {
     <main>
       <Hero />
       <Product />
-      <section className="bg-[#5B1312] flex items-center justify-center">
-        <p className="text-4xl">OUR CAFE</p>
-      </section>
+      <OurCafe />
+      <Footer />
+      <About />
     </main>
   )
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { ProductCard } from '../../ProductCard'
+import { CoffeeBorder } from '../../CoffeeBorder'
 
 const product = [
   {
@@ -82,11 +83,7 @@ export const Product = () => {
       </div>
       <div className="text-[#5B1312] flex-col mt-18 lg:text-[40px] leading-3.5 flex items-center justify-center gap-5">
         <p className="text-center">OUR BEST SELLERS</p>
-        <div className="text-[#A56D44] flex justify-center gap-2">
-          <div className="w-[25vw] bg-[#5B1312] h-0.5 mt-4"></div>
-          <Image src="/images/coffee-icon.svg" alt="Coffee Icons" width={28} height={33} />
-          <div className="w-[25vw] bg-[#5B1312] h-0.5 mt-4"></div>
-        </div>
+        <CoffeeBorder />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-8 xl:grid-cols-4 gap-13">
           {product.map((e, i) => {
             return (

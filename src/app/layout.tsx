@@ -16,17 +16,11 @@ export const metadata: Metadata = {
     // url: 'https://your-vercel-link.vercel.app',
     siteName: 'Roasted Coffee House',
     images: [
-      // {
-      //   url: 'https://your-vercel-link.vercel.app/og-image.jpg', // Optional: bisa tambahkan banner og
-      //   width: 1200,
-      //   height: 630,
-      //   alt: 'Roasted Coffee House'
-      // }
       {
-        url: 'https://your-vercel-link.vercel.app/og-image.jpg', // Optional: bisa tambahkan banner og
+        url: '/logo/roasted-coffee.png',
         width: 1200,
         height: 630,
-        alt: 'Roasted Coffee House'
+        alt: '/logo/roasted-coffee.png'
       }
     ],
     locale: 'en_US',
