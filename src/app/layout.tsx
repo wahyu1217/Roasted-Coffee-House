@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { larken } from '@/fonts/larken'
+import { Navbar } from './components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Roasted Coffee House',
@@ -15,17 +16,11 @@ export const metadata: Metadata = {
     // url: 'https://your-vercel-link.vercel.app',
     siteName: 'Roasted Coffee House',
     images: [
-      // {
-      //   url: 'https://your-vercel-link.vercel.app/og-image.jpg', // Optional: bisa tambahkan banner og
-      //   width: 1200,
-      //   height: 630,
-      //   alt: 'Roasted Coffee House'
-      // }
       {
-        url: 'https://your-vercel-link.vercel.app/og-image.jpg', // Optional: bisa tambahkan banner og
+        url: '/logo/roasted-coffee.png',
         width: 1200,
         height: 630,
-        alt: 'Roasted Coffee House'
+        alt: '/logo/roasted-coffee.png'
       }
     ],
     locale: 'en_US',
@@ -40,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`scroll-smooth ${larken.variable} antialiased`}>{children}</body>
+      <body className={`scroll-smooth ${larken.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

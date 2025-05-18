@@ -1,29 +1,46 @@
 {
-  "name": "portfoilio-1",
+  "name": "roasted-coffee-house",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "husky": "^9.1.7",
+    "@iconify/react": "^6.0.0",
+    "iconify-icon": "^3.0.0",
+    "lucide-react": "^0.510.0",
     "next": "15.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "zustand": "^5.0.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@iconify-icon/react": "^3.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
   }
 }
