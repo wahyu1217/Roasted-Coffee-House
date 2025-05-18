@@ -11,6 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@iconify/react": "^6.0.0",
+    "iconify-icon": "^3.0.0",
     "lucide-react": "^0.510.0",
     "next": "15.3.2",
     "react": "^19.0.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@iconify-icon/react": "^3.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
